@@ -1,0 +1,132 @@
+.NewPost-body {
+  height: 100vh;
+  background: linear-gradient(#141e30, #7aaae0);
+}
+
+main.NewPost > div > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+main.NewPost > div > form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+main.NewPost > div > form > textarea {
+  width: 600px;
+  height: 140px;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+}
+
+main.NewPost > div > form > input {
+  margin-bottom: 1rem;
+}
+
+main.NewPost > div > form > button {
+  width: 80px;
+  border: 1px solid gray;
+  align-self: center;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+main.NewPost > p.Error {
+  margin-top: 1.5rem;
+  color: rgb(187, 36, 36);
+}
+
+.icon-upload {
+  display: flex;
+  height: 60px;
+  width: 60px;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+textarea {
+  color: #2c5184;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.upload-confirm > button {
+  border-radius: 30px;
+  height: 40px;
+  width: 80px;
+  color: #2c5184;
+  background-color: white;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: rgb(18, 8, 54);
+}
+
+.upload-confirm {
+  align-items: center;
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+/* Media queries Medium */
+
+@media screen and (max-width: 1024px) {
+  main.NewPost > div > form {
+    margin-top: 7rem;
+  }
+
+  main.NewPost > div > form > textarea {
+    width: 450px;
+    height: 125px;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+  }
+
+  .upload-confirm {
+    align-items: center;
+    display: flex;
+    width: 450px;
+    padding: 10px;
+    justify-content: space-between;
+  }
+}
+
+/* Media queries Small  */
+
+@media screen and (max-width: 600px) {
+  main.NewPost > div > form {
+    margin-top: 7rem;
+  }
+
+  main.NewPost > div > form > textarea {
+    width: 350px;
+    height: 125px;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+  }
+
+  .upload-confirm {
+    align-items: center;
+    display: flex;
+    width: 300px;
+    padding: 10px;
+    justify-content: space-between;
+  }
+}

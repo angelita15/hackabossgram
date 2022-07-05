@@ -1,0 +1,167 @@
+.Post-body {
+  height: 100vh;
+  background-color: #15202b;
+}
+
+main.MainPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #15202b;
+}
+
+ul.PostList {
+  list-style: none;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+ul.PostList > li {
+  padding-top: 0.5rem;
+  border: 1px solid rgb(119, 107, 107);
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px 2px rgba(250, 249, 249, 0.374);
+}
+
+ul.PostList > li > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+
+ul.PostList > li > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+ul.PostList > li > div > p {
+  padding: 0.7rem;
+}
+
+ul.PostList > li > div > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+footer > div.like-section {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+}
+
+footer > p {
+  padding-left: 1.7rem;
+  max-width: 600px;
+}
+
+nav.Nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.icons-main {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchbutton {
+  visibility: hidden;
+  width: 1px;
+}
+
+nav.Nav-search > img {
+  height: 40px;
+  border-radius: 10px;
+}
+
+nav.Nav-search > form {
+  display: flex;
+  align-items: center;
+}
+
+nav.Nav-search > form > input[type='text'] {
+  padding: 0.5rem;
+  margin: 8px 0;
+  border-radius: 20px;
+  border: 2px solid rgb(247, 249, 249);
+}
+
+nav.Nav-search > form > input[type='text']:focus {
+  border: 3px solid rgb(91, 91, 252);
+}
+
+.icon-style {
+  height: 20px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.lupa {
+  color: rgb(18 8 54);
+  position: relative;
+  left: 11rem;
+}
+
+li > footer > .like-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deleteB-post {
+  color: rgb(244, 33, 46);
+  background-color: #15202b;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.link-externo {
+  color: white;
+}
+
+.div-delete {
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+div.heart {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  background-image: url('/public/heart_animation.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+div.heart:hover {
+  background-position: right;
+}
+
+div.heart.IsAnimating {
+  animation: heart-burst 0.8s steps(28) 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heart-burst {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.likess > p {
+  margin-left: -26px;
+}

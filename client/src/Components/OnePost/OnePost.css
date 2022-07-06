@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #15202b;
-  height: 1100px;
+  height: 100vh;
 }
 
 .IdPost-content {
@@ -42,13 +42,13 @@
 
 @media screen and (max-width: 1024px) {
   .IdPost {
-    height: 1190px;
+    height: 100vh;
   }
 }
 /* Media queries Small  */
 
 @media screen and (max-width: 600px) {
   .IdPost {
-    height: 950px;
+    height: 100vh;
   }
 }

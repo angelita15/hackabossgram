@@ -7,11 +7,11 @@ import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 const Navbar = () => {
   return (
     <main className='Second-nav'>
-      <nav className='Nav-search'>
+      <nav className='Nav-OnePost'>
         <img src={process.env.PUBLIC_URL + '/minilogo.png'} alt='minilogo' />
         <div className='icons-main'>
           <a href='/posts'>
-            <BsFillArrowLeftSquareFill className='icon-style' />
+            <BsFillArrowLeftSquareFill className='mini-icon' />
           </a>
         </div>
       </nav>

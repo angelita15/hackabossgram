@@ -1,0 +1,229 @@
+{
+    "info": {
+        "_postman_id": "cabf8b13-2a0f-40fb-91c0-9fcb0e2b4372",
+        "name": "instagram",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Posts",
+            "item": [
+                {
+                    "name": "New Post",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU3MTExMDgzLCJleHAiOjE2NTk3MDMwODN9.5tuBB4MAv-XYngFq9NDTpvqMgttoD8QW-rNaRZCCTtU",
+                                "type": "default"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "text",
+                                    "value": "Hola a todos \n",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "image",
+                                    "type": "file",
+                                    "src": "/C:/Users/PieroOP/OneDrive/Escritorio/hackgram/OIP.jpg"
+                                }
+                            ],
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:4000/posts/",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["posts", ""]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Posts",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:4000/posts/",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["posts", ""]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Posts by ID",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "http://localhost:4000/posts/2",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["posts", "2"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Like method",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU2NjEyMTQzLCJleHAiOjE2NTkyMDQxNDN9.l53wBo1214vuQCjkCRpskrK55d--DTAmlF49vaEoZuM",
+                                "type": "default"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:4000/posts/2/like",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["posts", "2", "like"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get post with value",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:4000/posts?keyword=",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["posts"],
+                            "query": [
+                                {
+                                    "key": "keyword",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete post",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjU2NzA2NTAzLCJleHAiOjE2NTkyOTg1MDN9.2R0hPGi6CzTBCl9ctJ_tVfXv_DYy0uRPHR8mDE09VYA",
+                                "type": "default"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:4000/posts/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["posts", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Create user",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"username\": \"student\",\r\n    \"email\": \"student@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:4000/users",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login token",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU2NjEyMTQzLCJleHAiOjE2NTkyMDQxNDN9.l53wBo1214vuQCjkCRpskrK55d--DTAmlF49vaEoZuM",
+                                "type": "default"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"email\": \"student@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:4000/login",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["login"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get user ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:4000/users/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "4000",
+                            "path": ["users", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}

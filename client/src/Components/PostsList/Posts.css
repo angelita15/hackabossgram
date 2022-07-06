@@ -98,8 +98,8 @@ nav.Nav-search > form > input[type='text']:focus {
 }
 
 .icon-style {
-  height: 20px;
-  width: 35px;
+  height: 30px;
+  width: 55px;
   display: flex;
   align-items: center;
   color: white;
@@ -127,6 +127,8 @@ li > footer > .like-section {
 
 .link-externo {
   color: white;
+  height: 20px;
+  width: 20px;
 }
 
 .div-delete {
@@ -164,4 +166,36 @@ div.heart.IsAnimating {
 
 .likess > p {
   margin-left: -26px;
+}
+
+/* Media queries Medium */
+
+@media screen and (max-width: 1024px) {
+  nav.Nav-search > img {
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .icon-style {
+    height: 25px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+}
+/* Media queries Small  */
+
+@media screen and (max-width: 600px) {
+  nav.Nav-search > img {
+    display: none;
+  }
+
+  .icon-style {
+    height: 20px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
 }
